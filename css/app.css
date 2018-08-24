@@ -1,0 +1,25 @@
+/* Flexbox layout */
+
+html {
+    height: 100%;
+}
+
+.triangleview-flexbox-body {
+    height: 100%;
+    margin: 0;
+}
+
+.triangleview-flexbox-box {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.triangleview-flexbox-top {
+    flex: 0 0 auto;
+}
+
+.triangleview-flexbox-graphics {
+    width: 100%;
+    flex: 1 1 auto;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Triangle View</title>
+
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body class="triangleview-flexbox-body triangleview-flexbox-box">
+  <div class="triangleview-flexbox-top">
+    <nav class="navbar navbar-light bg-light">
+      <a href="#" class="navbar-brand">Triangle View</a>
+      <div class="form-inline">
+        <button type="button" class="btn mr-2 mr-sm-2">Open</button>
+        <button type="button" class="btn">Save</button>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div>
+        <div class="form-group row mt-2">
+          <label for="notesField" class="col-sm-2 col-form-label">Notes</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="notesField"/>
+          </div>
+        </div>
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-sm-2 col-form-label">Year</legend>
+            <div class="col-sm-10 col-form-label">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="activeYear" value="1" id="activeYear1"/>
+                <label class="form-check-label" for="activeYear1" id="activeYear1Label">1</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="activeYear" value="2" id="activeYear2"/>
+                <label class="form-check-label" for="activeYear2" id="activeYear2Label">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="activeYear" value="3" id="activeYear3"/>
+                <label class="form-check-label" for="activeYear3" id="activeYear3Label">3</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+  <svg id="graphics-svg" class="triangleview-flexbox-graphics" viewBox="0 0 100 100">
+    <g transform="translate(0 -270.54)">
+     <g stroke="#000" fill="none">
+      <circle cx="50" cy="296.35" r="12.5"/>
+      <circle cy="344.74" cx="22.143" r="12.5"/>
+      <circle cx="77.857" cy="344.74" r="12.5"/>
+     </g>
+     <g font-size="42.667px" font-family="&apos;Myriad Pro&apos;" fill="#000000">
+      <text id="name-b" style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" xml:space="preserve" line-height="1.25" y="298.25146" x="49.880207"><tspan font-size="5.3333px" y="298.25146" x="49.880207" font-family="sans-serif">B</tspan></text>
+      <text id="name-c" style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" xml:space="preserve" line-height="1.25" y="346.64432" x="22.023067"><tspan font-size="5.3333px" y="346.64432" x="22.023067" font-family="sans-serif">C</tspan></text>
+      <text id="name-a" style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" xml:space="preserve" line-height="1.25" y="346.64432" x="77.73735"><tspan font-size="5.3333px" y="346.64432" x="77.73735" font-family="sans-serif">A</tspan></text>
+     </g>
+     <g transform="translate(0 -1.9996)" stroke="#000">
+      <g stroke-width="2" fill="none">
+       <path id="conn-ca-conflict" d="m38 344.74h24"/>
+       <path id="conn-ca-contact" d="m38 340.74h24"/>
+       <path id="conn-ca-distance" d="m38 348.74h24"/>
+       <path id="conn-ca-polarization" d="m38 352.74h24"/>
+      </g>
+      <path id="conn-ca-polarization-to-a" d="m62 353.74v-2l1.4029 0.99995z" stroke-width="1px"/>
+      <path id="conn-ca-polarization-to-c" d="m38 353.74v-2l-1.4029 0.99995z" stroke-width="1px"/>
+      <g transform="rotate(60 79.072 347.59)">
+       <g stroke-width="2" fill="none">
+        <path id="conn-ab-conflict" d="m38 344.74h24"/>
+        <path id="conn-ab-contact" d="m38 340.74h24"/>
+        <path id="conn-ab-distance" d="m38 348.74h24"/>
+       </g>
+       <path id="conn-ab-polarization-to-a" d="m62 353.74v-2l1.4029 0.99995z" stroke-width="1px"/>
+       <path id="conn-ab-polarization-to-b" d="m38 353.74v-2l-1.4029 0.99995z" stroke-width="1px"/>
+       <path id="conn-ab-polarization" d="m38 352.74h24" stroke-width="2" fill="none"/>
+      </g>
+      <g transform="matrix(-.5 .86603 .86603 .5 -239.8 105.32)">
+       <g stroke-width="2" fill="none">
+        <path id="conn-bc-conflict" d="m38 344.74h24"/>
+        <path id="conn-bc-contact" d="m38 340.74h24"/>
+        <path id="conn-bc-distance" d="m38 348.74h24"/>
+       </g>
+       <path id="conn-bc-polarization-to-c" d="m62 353.74v-2l1.4029 0.99995z" stroke-width="1px"/>
+       <path id="conn-bc-polarization-to-b" d="m38 353.74v-2l-1.4029 0.99995z" stroke-width="1px"/>
+       <path id="conn-bc-polarization" d="m38 352.74h24" stroke-width="2" fill="none"/>
+      </g>
+     </g>
+    </g>
+  </svg>
+
+  <!-- <script src="jquery/jquery-3.3.1.min.js"></script> -->
+  <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+  <script src="js/triangle.js"></script>
+  <script src="js/graphics.js"></script>
+</body>
+</html>

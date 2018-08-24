@@ -1,0 +1,7 @@
+4 interaction-type things:
+
+Contact 
+Conflict
+Distance
+Polarization (can be directional)
+
