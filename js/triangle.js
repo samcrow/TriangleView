@@ -1,6 +1,5 @@
 
-function Connections(year, contact, conflict, distance, polarization, polarizationDirection) {
-    this.year = year || 0;
+function Connections(contact, conflict, distance, polarization, polarizationDirection) {
     this.contact = contact || 1;
     this.conflict = conflict || 1;
     this.distance = distance || 1;

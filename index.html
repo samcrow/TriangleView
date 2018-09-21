@@ -13,38 +13,201 @@
     <nav class="navbar navbar-light bg-light">
       <a href="#" class="navbar-brand">Triangle View</a>
       <div class="form-inline">
-        <button type="button" class="btn mr-2 mr-sm-2">Open</button>
-        <button type="button" class="btn">Save</button>
+        <button type="button" id="openButton" class="btn mr-2 mr-sm-2">Open</button>
+        <button type="button" id="saveButton" class="btn">Save</button>
       </div>
     </nav>
     <div class="container-fluid">
-      <div>
+      <!-- General form -->
+      <form id="generalForm">
         <div class="form-group row mt-2">
           <label for="notesField" class="col-sm-2 col-form-label">Notes</label>
           <div class="col-sm-10">
             <input type="text" class="form-control" id="notesField"/>
           </div>
         </div>
-        <fieldset class="form-group">
+        <div class="form-group">
           <div class="row">
-            <legend class="col-sm-2 col-form-label">Year</legend>
-            <div class="col-sm-10 col-form-label">
+            <div class="col-sm-2 col-form-label">Year</div>
+            <div class="col-sm-9 col-form-label">
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="activeYear" value="1" id="activeYear1"/>
-                <label class="form-check-label" for="activeYear1" id="activeYear1Label">1</label>
+                <input type="text" size="4" maxlength="4" pattern="[0-9]{4}" id="activeYear1Field" class="form-control"/>
               </div>
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="activeYear" value="2" id="activeYear2"/>
-                <label class="form-check-label" for="activeYear2" id="activeYear2Label">2</label>
+                <input type="text" size="4" maxlength="4" pattern="[0-9]{4}" id="activeYear2Field" class="form-control"/>
               </div>
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="activeYear" value="3" id="activeYear3"/>
-                <label class="form-check-label" for="activeYear3" id="activeYear3Label">3</label>
+                <input type="text" size="4" maxlength="4" pattern="[0-9]{4}" id="activeYear3Field" class="form-control"/>
               </div>
             </div>
           </div>
-        </fieldset>
-      </div>
+        </div>
+      </form>
+      <!-- Year-specific form -->
+      <form class="row" id="yearForm">
+        <div class="col-sm">
+          <h5>A-B</h5>
+          <div class="form-group row">
+            <label for="selectAbContact" class="col-sm-3 col-form-label">Contact</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectAbContact">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <label for="selectAbConflict" class="col-sm-3 col-form-label">Conflict</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectAbConflict">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="selectAbDistance" class="col-sm-3 col-form-label">Distance</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectAbDistance">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <label for="selectAbPolarization" class="col-sm-3 col-form-label">Polarization</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectAbPolarization">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="selectAbPolarizationDirection" class="col-sm-3 col-form-label">Direction</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectAbPolarizationDirection">
+                <option value="none">None</option>
+                <option value="to_first">To A</option>
+                <option value="to_second">To B</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <h5>B-C</h5>
+          <div class="form-group row">
+            <label for="selectBcContact" class="col-sm-3 col-form-label">Contact</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectBcContact">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <label for="selectBcConflict" class="col-sm-3 col-form-label">Conflict</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectBcConflict">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="selectBcDistance" class="col-sm-3 col-form-label">Distance</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectBcDistance">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <label for="selectBcPolarization" class="col-sm-3 col-form-label">Polarization</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectBcPolarization">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="selectBcPolarizationDirection" class="col-sm-3 col-form-label">Direction</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectBcPolarizationDirection">
+                <option value="none">None</option>
+                <option value="to_first">To B</option>
+                <option value="to_second">To C</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <h5>C-A</h5>
+          <div class="form-group row">
+            <label for="selectCaContact" class="col-sm-3 col-form-label">Contact</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectCaContact">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <label for="selectCaConflict" class="col-sm-3 col-form-label">Conflict</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectCaConflict">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="selectCaDistance" class="col-sm-3 col-form-label">Distance</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectCaDistance">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <label for="selectCaPolarization" class="col-sm-3 col-form-label">Polarization</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectCaPolarization">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="selectCaPolarizationDirection" class="col-sm-3 col-form-label">Direction</label>
+            <div class="col-lg">
+              <select class="form-control" id="selectCaPolarizationDirection">
+                <option value="none">None</option>
+                <option value="to_first">To C</option>
+                <option value="to_second">To A</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 
@@ -56,9 +219,9 @@
       <circle cx="77.857" cy="344.74" r="12.5"/>
      </g>
      <g font-size="42.667px" font-family="&apos;Myriad Pro&apos;" fill="#000000">
-      <text id="name-b" style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" xml:space="preserve" line-height="1.25" y="298.25146" x="49.880207"><tspan font-size="5.3333px" y="298.25146" x="49.880207" font-family="sans-serif">B</tspan></text>
-      <text id="name-c" style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" xml:space="preserve" line-height="1.25" y="346.64432" x="22.023067"><tspan font-size="5.3333px" y="346.64432" x="22.023067" font-family="sans-serif">C</tspan></text>
-      <text id="name-a" style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" xml:space="preserve" line-height="1.25" y="346.64432" x="77.73735"><tspan font-size="5.3333px" y="346.64432" x="77.73735" font-family="sans-serif">A</tspan></text>
+      <text id="name-b" style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" xml:space="preserve" y="298.25146" x="49.880207"><tspan font-size="5.3333px" y="298.25146" x="49.880207" font-family="sans-serif">B</tspan></text>
+      <text id="name-c" style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" xml:space="preserve" y="346.64432" x="22.023067"><tspan font-size="5.3333px" y="346.64432" x="22.023067" font-family="sans-serif">C</tspan></text>
+      <text id="name-a" style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" xml:space="preserve" y="346.64432" x="77.73735"><tspan font-size="5.3333px" y="346.64432" x="77.73735" font-family="sans-serif">A</tspan></text>
      </g>
      <g transform="translate(0 -1.9996)" stroke="#000">
       <g stroke-width="2" fill="none">
@@ -97,5 +260,8 @@
   <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
   <script src="js/triangle.js"></script>
   <script src="js/graphics.js"></script>
+  <script src="js/document.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/application.js"></script>
 </body>
 </html>
